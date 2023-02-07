@@ -1,138 +1,82 @@
-// ------------------FIRST PROBLEM----------------------
-
-// Details of the function-----
-
-// Function name :   mindGame
-// (1) Take a number as input
-// (2) Multiply this number with 3
-// (3) Add 10 with this above result
-// (4) divide by 2 to the above result
-// (5) from the above number subtract 5
-// (2) return the final output  
-
-
+//  1st problem:
 
 // I'm writing this function by using some mathematical operations to get a final output. As well as I follow the given instructions by the instructor.
 
-// function mindGame(){
-//     let inputNumber = 18;
-//     let numMultiplication = (inputNumber * 3);
-//     // console.log(numMultiplication);
-//     let numAddition = (numMultiplication + 10);
-//     // console.log(numAddition);
-//     let numDivision = (numAddition / 2);
-//     // console.log(numDivision);
-//     let numSubtraction = (numDivision - 5);
-//     let finalResult = numSubtraction;
-//     // console.log(finalResult);
-//     // return finalResult;
-// }
-// mindGame();
-    
+function mindGame(inputNumber) {
+  let numMultiplication = inputNumber * 3;
+  let numAddition = numMultiplication + 10;
+  let numDivision = numAddition / 2;
+  let numSubtraction = numDivision - 5;
+  let finalResult = numSubtraction;
+  return finalResult;
+}
+let finalOutcome = mindGame(9);
+console.log(finalOutcome);
 
-// function mindGame(inputNumber){
-//     let numMultiplication = (inputNumber * 3);
-//     // console.log(numMultiplication);
-//     let numAddition = (numMultiplication + 10);
-//     // console.log(numAddition);
-//     let numDivision = (numAddition / 2);
-//     // console.log(numDivision);
-//     let numSubtraction = (numDivision - 5);
-//     let finalResult = numSubtraction;
-//     // return finalResult;
-// }
-// let finalOutcome = mindGame(18);
-// // console.log(finalOutcome);
-    
-
-
-
-
-    
-
-
-
-// -------------------------SECOND PROBLEM-------------------------------
-
-
-// Function Details------
-//    Function Name :      evenOdd
-// (1) Take a string value as input
-// (2) If the number of 'Character Value' of the string is even then return even
-// (3) If the number of 'Character Value' of the string is odd then return odd
-
-
-
-
+// 2nd Problem:
 
 // the main focus of writing the function is to define the character numbers of a particular string is either even or odd. I follow the instructions of the instructor.
 
+function evenOdd(stringValue) {
+  stringChar = stringValue.length;
+  let remainder = stringChar % 2;
+  if (remainder === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
+}
+let isEven = evenOdd("tahnuma");
+console.log(isEven);
 
+// 3rd Problem:
 
-// function evenOdd(){
-//     let stringValue = 'tahnuma';
-//     let stringChar = stringValue.length;
-//     let remainder = stringChar % 2;
-// if(remainder === 0){
-//     return "even";
-    
-// }
-// else{
-//     return "odd";
-    
-// }
-// }
-// let finalOutput = evenOdd();
-// console.log(finalOutput);
+// the main purpose of writing the function is to show less than or greater than of a input number using mathematical operations. By following the instructions.
 
+function isLGSeven(input) {
+  let differValue = input - 7;
+  if (differValue < 7) {
+    return differValue;
+  } else {
+    return input * 2;
+  }
+}
+let result = isLGSeven(15);
+console.log(result);
 
+// 4th Problem:
 
+// I wrote this function for finding bad data from an array.
 
- 
+function findingBadData(array) {
+  let badData = [];
+  for (i = 0; i < array.length; i++) {
+    let element = array[i];
+    if (element < -1) {
+      badData.push(element);
+    }
+  }
+  return badData.length;
+}
+let goodAndBadData = [-12, 9, -17, -6, -10, 23, -54, 67];
+let outputResult = findingBadData(goodAndBadData);
+console.log(outputResult);
 
-// function evenOdd(stringValue){
-//     stringChar = stringValue.length;
-//     let remainder = stringChar % 2;
-//     if(remainder === 0){
-//         return "even";
-//     }
-//     else{
-//         return "odd";
-//     }
-//     }
-//     let isEven = evenOdd('tahnuma');
-//     console.log(isEven);
+// 5th Problem:
 
+// purpose of the function is that to show if there are three friends have some gems and to convert their gems into diamond what will be the case.
 
-
-
-
-
-//-----------------------------THIRD PROBLEM-----------------------------------------
-  
-
-// Function Details
-
-// (1) Function Name:      isLGSeven
-// (2) subtract 7 from the above number
-// (3) if the subtraction result is equal or greater than 7 then return the value as ' 2 times of the taken input value'.
-// (4) if the subtraction result is less than 7 then return value as same as you get
-
-
-
-// the main purpose of writing the function is to show less than or greater than of a result using operations. By following the instructions.
-
-
-
-
-// function isLGSeven(input){
-//     let differValue = (input - 7);
-//     if(differValue >= 7){
-//         return input*2;
-//     }
-//     else{
-//         return differValue;
-//     }
-// }
-// let result = isLGSeven(18);
-// console.log(result);
+function gemsToDiamond(gem1, gem2, gem3) {
+  let powerOfGem1 = gem1 * 21;
+  let powerOfGem2 = gem2 * 32;
+  let powerOfGem3 = gem3 * 43;
+  let totalDiamond = powerOfGem1 + powerOfGem2 + powerOfGem3;
+  let difference = totalDiamond - 2000;
+  if (totalDiamond >= 1000 * 2) {
+    return difference;
+  } else {
+    return totalDiamond;
+  }
+}
+let finalResult = gemsToDiamond(20, 200, 50);
+console.log(finalResult);
